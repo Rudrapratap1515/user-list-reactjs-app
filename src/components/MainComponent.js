@@ -16,14 +16,12 @@ class Main extends React.Component{
     }
 
     selectUserOnClick(item,e){
-        console.log(e);
         this.setState(prevState => {
             let newState = prevState;
             newState.selectedUsers.push(item);
             return newState;
         })
         document.getElementById(item.id).backgroundColor = "red";
-        console.log(this.state.selectedUsers);
     }
 
     componentDidMount(){
@@ -35,7 +33,6 @@ class Main extends React.Component{
             })
             return newState;
         })
-        console.log(this.state);
     }
     render(){
         return(
